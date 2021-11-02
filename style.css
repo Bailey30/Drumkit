@@ -8,20 +8,43 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: #10002b;
+    background-color: #cb997e;
 }
 .container {
+    position: relative;
     display: flex;
-    max-width: 300px;
+    max-width: 360px;
+    height: 360px;
     flex-wrap: wrap;
-    background-color: #240046;
+    background-color: #b7b7a4;
     border-radius: 5px;
+    -webkit-box-shadow: 3px 21px 5px 4px rgba(0,0,0,0.09); 
+    box-shadow: 3px 21px 5px 4px rgba(0,0,0,0.09);
 }
 .drum  {
     min-width: 100px;
-    min-height: 100px;
+    height: 100px;
     text-align: center;
-    background-color: #240046;
+    background-color: #ffe8d6;
     border-radius: 5px;
-    color: white;
+    color: #6b705c;
+    margin: 10px;
+    position: relative;
+    -webkit-box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.047); 
+box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.04)
+}
+.btm {
+    position: absolute;
+    background-color: #ddbea9;
+    width: 100px;
+    height: 10px;
+    bottom: 0;
+}
+.btmbtm {
+    position: absolute;
+    width: 360px;
+    height: 25px;
+    bottom: -20px;
+    background-color: #b5b5a1;
+    z-index: -1;
 }
