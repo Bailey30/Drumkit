@@ -14,13 +14,8 @@ for (let i = 0; i < drums.length; i++) {
             drums[i].style.background = "#240046"
         }, 30);
     });
-
-
 }
 
-function playsound(input) {
-    new Audio("sounds2/" + input + ".mp3").play();
-}
 document.addEventListener("keydown", function (event) {
     for (let i = 0; i < drums.length; i++) {
         if (drums[i].classList.contains(event.key)) {
@@ -32,30 +27,13 @@ document.addEventListener("keydown", function (event) {
             setTimeout(function () {
                 drums[id-1].style.background = "#240046"
             }, 30)
-            
+
             drums[id-1].style.transform = "scale(0.98)"
             setTimeout(function () {
                 drums[id-1].style.transform = "scale(1)"
             }, 50)
-        }
-
-
-        
+        }     
     }
 })
 
 
-// var button = document.querySelectorAll(".drum");
-
-// for (let i = 0; i < button.length; i++) {
-//     button[i].addEventListener("click", function () {
-
-//         // makesound(this.innerHTML)
-//         playsound(this.id)
-//     });
-
-// }
-
-// function playsound(input) {
-//    new Audio("sounds2/" + input + ".mp3").play(); 
-// }   
