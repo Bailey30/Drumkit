@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap');
+
+body {
+    font-family: 'Karla', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #10002b;
+}
+.container {
+    display: flex;
+    max-width: 300px;
+    flex-wrap: wrap;
+    background-color: #240046;
+    border-radius: 5px;
+}
+.drum  {
+    min-width: 100px;
+    min-height: 100px;
+    text-align: center;
+    background-color: #240046;
+    border-radius: 5px;
+    color: white;
+}
