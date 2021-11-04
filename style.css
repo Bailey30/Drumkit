@@ -28,7 +28,7 @@ body {
         transform:  translateY(0);
     }
     100% {
-        transform: translateY(2px)
+        transform: translateY(3px)
     }
 }
 @keyframes squash {
@@ -96,6 +96,8 @@ body {
     width: 100px;
     height: 10px;
     bottom: 0;
+    
+    
 }
 
 .btmbtm {
@@ -105,7 +107,27 @@ body {
     bottom: -20px;
     background-color: #b5b5a1;
     z-index: -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+.light{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4px;
+    aspect-ratio: 1;
+    border: 3px solid rgb(147, 146, 146);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+    z-index: 2;
+    text-align: center;
+    background: rgb(255, 65, 65);
+    
+}
+
 
 .animations {
     display: flex;
@@ -116,6 +138,7 @@ body {
     background-color: #b7b7a4;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    position: relative;
 }
 
 .hat1 {

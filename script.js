@@ -17,6 +17,7 @@ let tomright = document.querySelector(".tomright")
 let tomtop = document.querySelector(".tomtop")
 let cowbell = document.querySelector(".cowbell")
 let cowbell2 = document.querySelector(".cowbell2")
+let light = document.querySelector(".light")
 
 let rotate = 0
 for (let i = 0; i < drums.length; i++) {
@@ -174,6 +175,16 @@ for (let i = 0; i < drums.length; i++) {
             }, 500)
 
         }
+        //light animation
+        if (i === i) {
+            light.style.background = "rgb(143, 238, 128)"
+            setTimeout(() => {
+                light.style.background = 'rgb(247, 117, 117)'
+            }, 100)
+            
+
+        }
+
 
     });
 }
@@ -204,6 +215,7 @@ document.addEventListener("keydown", function (event) {
                 setTimeout(() => {
                     ani1.style.removeProperty('animation')
                 }, 100)
+
                 all.style.animation = "down 0.1s linear"
             setTimeout(() => {
                 all.style.removeProperty('animation')
@@ -249,6 +261,7 @@ document.addEventListener("keydown", function (event) {
             setTimeout(() => {
                 all.style.removeProperty('animation')
             }, 100)
+            
             ani3.style.animation = "snare 1s ease"
             setTimeout(() => {
                 ani3.style.removeProperty('animation')
@@ -334,6 +347,15 @@ document.addEventListener("keydown", function (event) {
             setTimeout(() => {
                 cowbell2.style.removeProperty('animation')
             }, 500)
+
+        }
+        // light animation
+        if (i === i) {
+            light.style.background = "rgb(143, 238, 128)"
+            setTimeout(() => {
+                light.style.background = 'rgb(247, 117, 117)'
+            }, 100)
+            
 
         }
         }
