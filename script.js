@@ -11,12 +11,19 @@ let ani3 = document.querySelector(".ani3")
 let all = document.querySelector(".all")
 let hat1 = document.querySelector(".hat1")
 let hat2 = document.querySelector(".hat2")
+let tom = document.querySelector(".tomline")
+let tomleft = document.querySelector(".tomleft")
+let tomright = document.querySelector(".tomright")
+let tomtop = document.querySelector(".tomtop")
+let cowbell = document.querySelector(".cowbell")
+let cowbell2 = document.querySelector(".cowbell2")
 
 let rotate = 0
 for (let i = 0; i < drums.length; i++) {
     drums[i].addEventListener("click", function () {
         new Audio("sounds/" + this.id + ".wav").play();
 
+        //button animations
         drums[i].style.transform = "translateY(10px)"
         setTimeout(function () {
             drums[i].style.transform = "translateY(0px)"
@@ -126,8 +133,47 @@ for (let i = 0; i < drums.length; i++) {
 
         }
 
+        //crash animation
+        if (i === 7) {
+            all.style.animation = "squash 1.1s ease-out"
+            setTimeout(() => {
+                all.style.removeProperty('animation')
+            }, 1100)
 
+        }
 
+        //tom animation 
+        if (i === 8) {
+            tom.style.animation = "tom 0.5s linear"
+            setTimeout(() => {
+                tom.style.removeProperty('animation')
+            }, 500)
+            tomleft.style.animation = "tomlefts .5s linear"
+            setTimeout(() => {
+                tomleft.style.removeProperty('animation')
+            }, 500)
+            tomright.style.animation = "tomrights .5s linear"
+            setTimeout(() => {
+                tomright.style.removeProperty('animation')
+            }, 500)
+            tomtop.style.animation = "tomtop .5s linear"
+            setTimeout(() => {
+                tomtop.style.removeProperty('animation')
+            }, 500)
+        }
+
+        //cowbell animation
+        if (i === 6) {
+            cowbell.style.animation = "cowbell .5s ease-out"
+            setTimeout(() => {
+                cowbell.style.removeProperty('animation')
+            }, 500)
+            cowbell2.style.animation = "cowbell .5s ease-out"
+            setTimeout(() => {
+                cowbell2.style.removeProperty('animation')
+            }, 500)
+
+        }
 
     });
 }
@@ -137,10 +183,9 @@ document.addEventListener("keydown", function (event) {
         if (drums[i].classList.contains(event.key)) {
             new Audio("sounds/" + drums[i].id + ".wav").play();
 
+            //button animations  
             drums[i].style.transform = "translateY(10px)"
-            console.log(drums[i].id);
-            setTimeout(function () {
-
+            setTimeout(function () { 
                 drums[i].style.transform = "translateY(0px)"
             }, 30);
             drums[i].style.height = 90 + "px"
@@ -164,6 +209,7 @@ document.addEventListener("keydown", function (event) {
                 all.style.removeProperty('animation')
             }, 100)
             }
+
             //hat animation
             if (i === 1 && rotate === 0) {
 
@@ -250,6 +296,46 @@ document.addEventListener("keydown", function (event) {
                     hat2.style.removeProperty('animation')
                 }, 500)
             }
+            //tom animation
+            if (i === 8) {
+                tom.style.animation = "tom 0.5s linear"
+                setTimeout(() => {
+                    tom.style.removeProperty('animation')
+                }, 500)
+                tomleft.style.animation = "tomlefts .5s linear"
+                setTimeout(() => {
+                    tomleft.style.removeProperty('animation')
+                }, 500)
+                tomright.style.animation = "tomrights .5s linear"
+                setTimeout(() => {
+                    tomright.style.removeProperty('animation')
+                }, 500)
+                tomtop.style.animation = "tomtop .5s linear"
+                setTimeout(() => {
+                    tomtop.style.removeProperty('animation')
+                }, 500)
+            }
+            //crash animation
+            if (i === 7) {
+                all.style.animation = "squash 1.1s ease-out"
+                setTimeout(() => {
+                    all.style.removeProperty('animation')
+                }, 1100)
+    
+            }
+
+            //cowbell animation
+        if (i === 6) {
+            cowbell.style.animation = "cowbell .5s ease-out"
+            setTimeout(() => {
+                cowbell.style.removeProperty('animation')
+            }, 500)
+            cowbell2.style.animation = "cowbell .5s ease-out"
+            setTimeout(() => {
+                cowbell2.style.removeProperty('animation')
+            }, 500)
+
+        }
         }
     }
 })
