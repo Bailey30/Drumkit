@@ -165,11 +165,11 @@ for (let i = 0; i < drums.length; i++) {
 
         //cowbell animation
         if (i === 6) {
-            cowbell.style.animation = "cowbell .5s ease-out"
+            cowbell.style.animation = "cowbell .5s ease-in"
             setTimeout(() => {
                 cowbell.style.removeProperty('animation')
             }, 500)
-            cowbell2.style.animation = "cowbell .5s ease-out"
+            cowbell2.style.animation = "cowbell .5s ease-in"
             setTimeout(() => {
                 cowbell2.style.removeProperty('animation')
             }, 500)
